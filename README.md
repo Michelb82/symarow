@@ -1,6 +1,6 @@
 *A tool for modeling the architecture of workflows, dependencies, and cognitive load in software and organizational systems.*
 
-#Intent
+# Intent
 
 Project Symarow is to be used as a visual aid for potential current and future constraints in workflow. The tools’ purpose is to be used as statistical input for dialogue when processes, teams or architecture are reviewed or planned to change in an organization.
 
