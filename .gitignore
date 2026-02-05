@@ -5,3 +5,4 @@ webserver/vendor
 #IDE's
 .cursor
 .idea
+/auth.json
