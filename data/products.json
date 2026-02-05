@@ -1,0 +1,24 @@
+{
+    "products": [
+        {
+            "id": "bag",
+            "name": "Bag",
+            "description": "Pretty bags"
+        },
+        {
+            "id": "leather-coat-female",
+            "name": "Leather Coat Female",
+            "description": "A beautiful coat"
+        },
+        {
+            "id": "fur-coat",
+            "name": "Fur Coat",
+            "description": "A furry coat"
+        },
+        {
+            "id": "leather-coat-male",
+            "name": "Leather Coat Male",
+            "description": "A Stoic coat"
+        }
+    ]
+}

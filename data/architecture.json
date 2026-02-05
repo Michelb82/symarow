@@ -1,0 +1,18 @@
+{
+    "software-system": {
+        "name": "Software System",
+        "description": "Monolith application with a single database and a single codebase.",
+        "components": [
+            {
+                "name": "Inventory Management",
+                "description": "Description 1",
+                "components": [
+                    {
+                        "name": "Inventory Management",
+                        "description": "Description 1"
+                    }
+                ]
+            }
+        ]
+    }
+}

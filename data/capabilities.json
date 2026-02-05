@@ -1,0 +1,140 @@
+{
+    "capabilities": [
+        {
+            "type": "main-capability",
+            "name": "Operations",
+            "description": "Description 1",
+            "capabilities": [
+                {
+                    "type": "sub-capability",
+                    "name": "Inventory Management",
+                    "description": "Description 1",
+                    "products": [
+                        "*"
+                    ],
+                    "processes": [
+                        "Purchase Order Processing",
+                        "Inventory Adjustments",
+                        "Inventory Reporting"
+                    ]
+                },
+                {
+                    "type": "main-capability",
+                    "name": "Quality Control",
+                    "description": "Description 1",
+                    "capabilities": [
+                        {
+                            "type": "sub-capability",
+                            "name": "Leather QA",
+                            "description": "Description 1",
+                            "products": [
+                                "Bag",
+                                "leather-coat-female",
+                                "leather-coat-male"
+                            ],
+                            "processes": [
+                                "Leather Inspection",
+                                "Leather Testing",
+                                "Leather Reporting"
+                            ]
+                        },
+                        {
+                            "type": "sub-capability",
+                            "name": "Fur QA",
+                            "description": "Description 2",
+                            "products": [
+                                "fur-coat"
+                            ],
+                            "processes": [
+                                "Fur Inspection",
+                                "Fur Testing",
+                                "Fur Reporting"
+                            ]
+                        }                    ]
+                },
+                {
+                    "type": "sub-capability",
+                    "name": "Packaging",
+                    "description": "Description 1",
+                    "products": [
+                        "*"
+                    ],
+                    "processes": [
+                        "Packaging Planning",
+                        "Packaging Reporting"
+                    ]
+                },
+                {
+                    "type": "sub-capability",
+                    "name": "Shipping",
+                    "description": "Description 1",
+                    "products": [
+                        "*"
+                    ],
+                    "processes": [
+                        "Shipping capacity planning",
+                        "Shipping Reporting"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "main-capability",
+            "name": "Customer Service",
+            "description": "Description 1",
+            "capabilities": [
+                {
+                    "type": "sub-capability",
+                    "name": "Returns",
+                    "description": "Description 1",
+                    "products": [
+                        "*"
+                    ],
+                    "processes": [
+                        "Question Answering",
+                        "Complaints Management"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "main-capability",
+            "name": "Finance",
+            "description": "Description 1",
+            "products": [
+                "*"
+            ],
+            "processes": [
+                "Financial Reporting",
+                "Factoring"
+            ]
+        },
+        {
+            "type": "main-capability",
+            "name": "Marketing",
+            "description": "Description 1",
+            "products": [
+                "*"
+            ],
+            "processes": [
+                "Marketing Campaigns",
+                "SEO",
+                "SEM"
+            ]
+        },
+        {
+            "type": "main-capability",
+            "name": "IT",
+            "description": "Description 1",
+            "products": [
+                "*"
+            ],
+            "processes": [
+                "IT Infrastructure",
+                "IT Security",
+                "IT Support",
+                "IT Development"
+            ]
+        }
+    ]
+}

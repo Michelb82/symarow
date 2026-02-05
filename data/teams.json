@@ -1,0 +1,119 @@
+{
+    "teams": [
+        {
+            "name": "Operations Team",
+            "description": "Description 1",
+            "processes": [
+                "Purchase Order Processing",
+                "Inventory Adjustments",
+                "Inventory Reporting"
+            ]
+        },
+        {
+            "name": "Quality Control Team",
+            "description": "Description 1",
+            "processes": [
+                "Leather Inspection",
+                "Leather Testing",
+                "Leather Reporting"
+            ]
+        },
+        {
+            "name": "Packaging Team",
+            "description": "Description 1",
+            "processes": [
+                "Packaging Planning",
+                "Packaging Reporting"
+            ]
+        },
+        {
+            "name": "Shipping Team",
+            "description": "Description 1",
+            "processes": [
+                "Shipping capacity planning",
+                "Shipping Reporting"
+            ]
+        },
+        {
+            "name": "Customer Service Team",
+            "description": "Description 1",
+            "processes": [
+                "Question Answering",
+                "Complaints Management"
+            ]
+        },
+        {
+            "name": "Finance Team",
+            "description": "Description 1",
+            "processes": [
+                "Financial Reporting",
+                "Factoring"
+            ]
+        },
+        {
+            "name": "Marketing Team",
+            "description": "Description 1",
+            "processes": [
+                "Marketing Campaigns",
+                "SEO",
+                "SEM"
+            ]
+        },
+        {
+            "name": "IT Development Team leather",
+            "description": "Description 1",
+            "processes": [
+                "IT Development",
+                "Purchase Order Processing",
+                "Inventory Adjustments",
+                "Inventory Reporting",
+                "Leather Testing",
+                "Leather Reporting",
+                "Packaging Planning",
+                "Packaging Reporting",
+                "Shipping capacity planning",
+                "Shipping Reporting",
+                "Question Answering",
+                "Complaints Management",
+                "Financial Reporting",
+                "Factoring",
+                "Marketing Campaigns",
+                "SEO",
+                "SEM"
+            ]
+        },
+        {
+            "name": "IT Development Team fur",
+            "description": "Description 1",
+            "processes": [
+                "IT Development",
+                "Purchase Order Processing",
+                "Inventory Adjustments",
+                "Inventory Reporting",
+                "Fur Inspection",
+                "Fur Testing",
+                "Fur Reporting",
+                "Packaging Planning",
+                "Packaging Reporting",
+                "Shipping capacity planning",
+                "Shipping Reporting",
+                "Question Answering",
+                "Complaints Management",
+                "Financial Reporting",
+                "Factoring",
+                "Marketing Campaigns",
+                "SEO",
+                "SEM"
+            ]
+        },
+        {
+            "name": "IT Infrastructure Team 1",
+            "description": "Description 1",
+            "processes": [
+                "IT Infrastructure",
+                "IT Security",
+                "IT Support"
+            ]
+        }
+    ]
+}
