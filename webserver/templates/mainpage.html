@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capabilities</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Capabilities</h1>
-        <div id="canvas" class="canvas">
-            <svg id="relations-svg" class="relations-layer"></svg>
-            <div id="blocks-container" class="blocks-container"></div>
-        </div>
+        <h1>Main Page</h1>
+        <a id="capabilities" data-type="capabilities" href="/#capabilities">Capabilities</a>
+        <a id="products" data-type="products" href="/#products">Products</a>
+        <a id="teams" data-type="teams" href="/#teams">Teams</a>
+        <a id="architecture" data-type="architecture" href="/#architecture">Architecture</a>
+        <a id="pipelines" data-type="pipelines" href="/#pipelines">Pipelines</a>
     </div>
-    <script>
-        window.pageData = JSON.parse(`{{ .Data }}`);
-        window.pageType = 'capabilities';
-        window.nextPageBase = '/capabilities';
-    </script>
-    <script src="/static/js/block-system.js"></script>
+    <div id="canvas" class="canvas"></div>
+    <script type="module" src="/static/js/canvas.js"></script>
 </body>
 </html>

@@ -18,11 +18,11 @@ func Routes() {
 
 	// Routes
 	r.GET("/", endpoints.RenderMainPage)
-	r.GET("/products", endpoints.RenderProducts)
-	r.GET("/capabilities", endpoints.RenderCapabilities)
-	r.GET("/teams", endpoints.RenderTeams)
-	r.GET("/architecture", endpoints.RenderArchitecture)
-	r.GET("/pipelines", endpoints.RenderPipelines)
+	r.GET("/products", endpoints.ServeJSON)
+	r.GET("/capabilities", endpoints.ServeJSON)
+	r.GET("/teams", endpoints.ServeJSON)
+	r.GET("/architecture", endpoints.ServeJSON)
+	r.GET("/pipelines", endpoints.ServeJSON)
 
 	// Start server on port 8080 (default)
 	// Server will listen on 0.0.0.0:8080 (localhost:8080 on Windows)
