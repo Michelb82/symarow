@@ -17,6 +17,8 @@ func LoadJSONForPath(path string) (any, error) {
 			return LoadArchitecture()
 		case "/pipelines":
 			return LoadPipelines()
+		case "/valuestreams":
+			return LoadValuestreams()
 		default:
 			return nil, fmt.Errorf("unknown path: %s", path)
 	}

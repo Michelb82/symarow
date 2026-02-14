@@ -1,16 +1,54 @@
 {
     "software-system": {
-        "name": "Software System",
+        "id": "ecommerce-platform",
+        "name": "Ecommerce Platform",
         "description": "Monolith application with a single database and a single codebase.",
         "components": [
             {
+                "id": "inventory-management",
                 "name": "Inventory Management",
                 "description": "Description 1",
-                "components": [
-                    {
-                        "name": "Inventory Management",
-                        "description": "Description 1"
-                    }
+                "processes": [
+                    "Purchase Order Processing",
+                    "Inventory Adjustments",
+                    "Inventory Reporting"
+                ]
+            },
+            {
+                "id": "shipping-management",
+                "name": "Shipping Management",
+                "description": "Description 1",
+                "processes": [
+                    "Shipping capacity planning",
+                    "Shipping Reporting"
+                ]
+            },
+            {
+                "id": "customer-service",
+                "name": "Customer Service",
+                "description": "Description 1",
+                "processes": [
+                    "Question Answering",
+                    "Complaints Management"
+                ]
+            },
+            {
+                "id": "finance",
+                "name": "Finance",
+                "description": "Description 1",
+                "processes": [
+                    "Financial Reporting",
+                    "Factoring"
+                ]
+            },
+            {
+                "id": "marketing",
+                "name": "Marketing",
+                "description": "Description 1",
+                "processes": [
+                    "Marketing Campaigns",
+                    "SEO",
+                    "SEM"
                 ]
             }
         ]

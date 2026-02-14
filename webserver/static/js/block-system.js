@@ -1,4 +1,4 @@
-import { BlockParser } from './block-parser.js';
+import { blockParser } from './block-parser.js';
 import { Capabilities, Products, Teams, Pipelines, Architecture, BLOCK_DEFAULT_WIDTH, BLOCK_DEFAULT_HEIGHT } from './block-containers.js';
 
 const PAD = 24;
@@ -14,7 +14,7 @@ function layout(items, viewWidth = 800) {
     const w = Math.min(BLOCK_DEFAULT_WIDTH, viewWidth - 2 * PAD);
     const h = BLOCK_DEFAULT_HEIGHT;
     let y = PAD;
-    for (const depthitem of items) {
+    for (const item of items) {
         const depth = item.depth ?? 0;
         item.x = PAD + depth * DEPTH_INDENT;
         item.y = y;

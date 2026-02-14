@@ -9,8 +9,11 @@
                     "type": "sub-capability",
                     "name": "Inventory Management",
                     "description": "Description 1",
-                    "products": [
-                        "*"
+                    "valuestreams": [
+                        "online-acquisition-journey",
+                        "physical-acquisition-journey",
+                        "review-and-reorder",
+                        "customer-product-returns"
                     ],
                     "processes": [
                         "Purchase Order Processing",
@@ -27,10 +30,11 @@
                             "type": "sub-capability",
                             "name": "Leather QA",
                             "description": "Description 1",
-                            "products": [
-                                "Bag",
-                                "leather-coat-female",
-                                "leather-coat-male"
+                            "valuestreams": [
+                                "physical-acquisition-journey",
+                                "customer-product-returns",
+                                "online-acquisition-journey",
+                                "review-and-reorder"
                             ],
                             "processes": [
                                 "Leather Inspection",
@@ -42,8 +46,11 @@
                             "type": "sub-capability",
                             "name": "Fur QA",
                             "description": "Description 2",
-                            "products": [
-                                "fur-coat"
+                            "valuestreams": [
+                                "physical-acquisition-journey",
+                                "customer-product-returns",
+                                "online-acquisition-journey",
+                                "review-and-reorder"
                             ],
                             "processes": [
                                 "Fur Inspection",
@@ -56,8 +63,10 @@
                     "type": "sub-capability",
                     "name": "Packaging",
                     "description": "Description 1",
-                    "products": [
-                        "*"
+                    "valuestreams": [
+                        "physical-acquisition-journey",
+                        "online-acquisition-journey",
+                        "review-and-reorder"
                     ],
                     "processes": [
                         "Packaging Planning",
@@ -68,8 +77,9 @@
                     "type": "sub-capability",
                     "name": "Shipping",
                     "description": "Description 1",
-                    "products": [
-                        "*"
+                    "valuestreams": [
+                        "online-acquisition-journey",
+                        "customer-product-returns"
                     ],
                     "processes": [
                         "Shipping capacity planning",
@@ -87,8 +97,11 @@
                     "type": "sub-capability",
                     "name": "Returns",
                     "description": "Description 1",
-                    "products": [
-                        "*"
+                    "valuestreams": [
+                        "customer-product-returns",
+                        "online-acquisition-journey",
+                        "review-and-reorder",
+                        "physical-acquisition-journey"
                     ],
                     "processes": [
                         "Question Answering",
@@ -101,8 +114,11 @@
             "type": "main-capability",
             "name": "Finance",
             "description": "Description 1",
-            "products": [
-                "*"
+            "valuestreams": [
+                "customer-product-returns",
+                "online-acquisition-journey",
+                "review-and-reorder",
+                "physical-acquisition-journey"
             ],
             "processes": [
                 "Financial Reporting",
@@ -113,8 +129,9 @@
             "type": "main-capability",
             "name": "Marketing",
             "description": "Description 1",
-            "products": [
-                "*"
+            "valuestreams": [
+                "online-acquisition-journey",
+                "physical-acquisition-journey"
             ],
             "processes": [
                 "Marketing Campaigns",
@@ -126,8 +143,11 @@
             "type": "main-capability",
             "name": "IT",
             "description": "Description 1",
-            "products": [
-                "*"
+            "valuestreams": [
+                "customer-product-returns",
+                "online-acquisition-journey",
+                "review-and-reorder",
+                "physical-acquisition-journey"
             ],
             "processes": [
                 "IT Infrastructure",

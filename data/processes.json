@@ -1,0 +1,144 @@
+{    
+    "processes": [
+        {
+            "id": "purchase-order-processing",
+            "name": "Purchase Order Processing",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "inventory-adjustments",
+            "name": "Inventory Adjustments",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "inventory-reporting",
+            "name": "Inventory Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "leather-inspection",
+            "name": "Leather Inspection",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "leather-reporting",
+            "name": "Leather Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "packaging-planning",
+            "name": "Packaging Planning",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "packaging-reporting",
+            "name": "Packaging Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "shipping-capacity-planning",
+            "name": "Shipping Capacity Planning",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "shipping-reporting",
+            "name": "Shipping Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "question-answering",
+            "name": "Question Answering",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "complaints-management",
+            "name": "Complaints Management",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "financial-reporting",
+            "name": "Financial Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "factoring",
+            "name": "Factoring",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "marketing-campaigns",
+            "name": "Marketing Campaigns",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        }
+    ]
+}
