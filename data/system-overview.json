@@ -1,0 +1,362 @@
+{
+    "valuestreams": [
+        {
+            "id": "online-acquisition-journey",
+            "name": "Online Acquisition Journey",
+            "description": "Our customers can acquire clothing online"
+        },
+        {
+            "id": "review-and-reorder",
+            "name": "Review and Reorder past Purchases",
+            "description": "Our customers can review and reorder past purchases"
+        },
+        {
+            "id": "customer-product-returns",
+            "name": "Customer Product Returns",
+            "description": "Customers can return products they have purchased"
+        },
+        {
+            "id": "physical-acquisition-journey",
+            "name": "Physical Acquisition Journey",
+            "description": "Our customers can acquire clothing in physical stores"
+        }
+    ],
+    "products": [
+        {
+            "id": "ecommerce",
+            "name": "e-commerce clothing retail",
+            "description": "An e-commerce platform for selling clothing",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "physical-retail",
+            "name": "physical clothing retail",
+            "description": "Our stores for physical retail",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        }
+    ],
+    "processes": [
+        {
+            "id": "purchase-order-processing",
+            "name": "Purchase Order Processing",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "inventory-adjustments",
+            "name": "Inventory Adjustments",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "inventory-reporting",
+            "name": "Inventory Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "leather-inspection",
+            "name": "Leather Inspection",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "leather-reporting",
+            "name": "Leather Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "packaging-planning",
+            "name": "Packaging Planning",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "packaging-reporting",
+            "name": "Packaging Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "physical-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "shipping-capacity-planning",
+            "name": "Shipping Capacity Planning",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "shipping-reporting",
+            "name": "Shipping Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "question-answering",
+            "name": "Question Answering",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "complaints-management",
+            "name": "Complaints Management",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "financial-reporting",
+            "name": "Financial Reporting",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "factoring",
+            "name": "Factoring",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        },
+        {
+            "id": "marketing-campaigns",
+            "name": "Marketing Campaigns",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"}
+            ]
+        }
+    ],
+    "capabilities": [
+        {
+            "id": "inventory-management",
+            "name": "Inventory Management",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"},
+                {"type": "process", "id": "purchase-order-processing", "signal": "strong"},
+                {"type": "process", "id": "inventory-adjustments", "signal": "strong"},
+                {"type": "process", "id": "inventory-reporting", "signal": "strong"},
+                {"type": "process", "id": "leather-inspection", "signal": "weak"},
+                {"type": "process", "id": "leather-reporting", "signal": "weak"},
+                {"type": "process", "id": "packaging-planning", "signal": "medium"},
+                {"type": "process", "id": "packaging-reporting", "signal": "medium"},
+                {"type": "process", "id": "shipping-capacity-planning", "signal": "medium"},
+                {"type": "process", "id": "shipping-reporting", "signal": "medium"},
+                {"type": "process", "id": "question-answering", "signal": "weak"},
+                {"type": "process", "id": "complaints-management", "signal": "weak"},
+                {"type": "process", "id": "financial-reporting", "signal": "weak"},
+                {"type": "process", "id": "factoring", "signal": "weak"}
+            ]
+        },
+        {
+            "id": "shipping-management",
+            "name": "Shipping Management",
+            "description": "Description 1",
+            "relations": [
+                {"type": "valuestream", "id": "online-acquisition-journey"},
+                {"type": "valuestream", "id": "review-and-reorder"},
+                {"type": "valuestream", "id": "customer-product-returns"},
+                {"type": "process", "id": "shipping-capacity-planning", "signal": "strong"},
+                {"type": "process", "id": "shipping-reporting", "signal": "strong"},
+                {"type": "process", "id": "question-answering", "signal": "weak"},
+                {"type": "process", "id": "complaints-management", "signal": "weak"},
+                {"type": "process", "id": "financial-reporting", "signal": "weak"},
+                {"type": "process", "id": "factoring", "signal": "weak"}
+            ]
+        }
+    ],
+    "teams": [
+        {
+            "id": "operations-team",
+            "name": "Operations Team",
+            "description": "Description 1",
+            "team-size": 9,
+            "relations": [
+                {"type": "process", "id": "purchase-order-processing", "signal": "strong"},
+                {"type": "process", "id": "inventory-adjustments", "signal": "strong"},
+                {"type": "process", "id": "inventory-reporting", "signal": "strong"},
+                {"type": "process", "id": "leather-inspection", "signal": "weak"},
+                {"type": "process", "id": "leather-reporting", "signal": "weak"},
+                {"type": "process", "id": "packaging-planning", "signal": "medium"},
+                {"type": "process", "id": "packaging-reporting", "signal": "medium"},
+                {"type": "process", "id": "shipping-capacity-planning", "signal": "medium"},
+                {"type": "process", "id": "shipping-reporting", "signal": "medium"}
+            ]
+        },
+        {
+            "id": "quality-control-team",
+            "name": "Quality Control Team",
+            "description": "Description 1",
+            "team-size": 3,
+            "relations": [
+                {"type": "process", "id": "leather-inspection", "signal": "weak"},
+                {"type": "process", "id": "leather-reporting", "signal": "weak"}
+            ]
+        },
+        {
+            "id": "packaging-team",
+            "name": "Packaging Team",
+            "description": "Description 1",
+            "team-size": 5,
+            "relations": [
+                {"type": "process", "id": "packaging-planning", "signal": "medium"},
+                {"type": "process", "id": "packaging-reporting", "signal": "medium"}
+            ]
+        },
+        { 
+            "id": "shipping-team",
+            "name": "Shipping Team",
+            "description": "Description 1",
+            "team-size": 5,
+            "relations": [
+                {"type": "process", "id": "shipping-capacity-planning", "signal": "medium"},
+                {"type": "process", "id": "shipping-reporting", "signal": "medium"}
+            ]
+        },
+        {
+            "id": "customer-service-team",
+            "name": "Customer Service Team",
+            "description": "Description 1",
+            "team-size": 8,
+            "relations": [
+                {"type": "process", "id": "question-answering", "signal": "weak"},
+                {"type": "process", "id": "complaints-management", "signal": "weak"}
+            ]
+        },
+        {
+            "id": "finance-team",
+            "name": "Finance Team",
+            "description": "Description 1",
+            "team-size": 5,
+            "relations": [
+                {"type": "process", "id": "financial-reporting", "signal": "weak"},
+                {"type": "process", "id": "factoring", "signal": "weak"}
+            ]
+        },
+        {
+            "id": "marketing-team",
+            "name": "Marketing Team",
+            "description": "Description 1",
+            "team-size": 10,
+            "relations": [
+                {"type": "process", "id": "marketing-campaigns", "signal": "weak"},
+                {"type": "process", "id": "seo", "signal": "weak"},
+                {"type": "process", "id": "sem", "signal": "weak"}
+            ]
+        },
+        {
+            "id": "it-development-team",
+            "name": "IT Development Team",
+            "description": "Description 1",
+            "team-size": 15,
+            "relations": [
+                {"type": "process", "id": "it-development", "signal": "strong"},
+                {"type": "process", "id": "purchase-order-processing", "signal": "strong"},
+                {"type": "process", "id": "inventory-adjustments", "signal": "strong"},
+                {"type": "process", "id": "inventory-reporting", "signal": "strong"},
+                {"type": "process", "id": "leather-inspection", "signal": "weak"},
+                {"type": "process", "id": "leather-reporting", "signal": "weak"},
+                {"type": "process", "id": "packaging-planning", "signal": "medium"},
+                {"type": "process", "id": "packaging-reporting", "signal": "medium"},
+                {"type": "process", "id": "shipping-capacity-planning", "signal": "medium"},
+                {"type": "process", "id": "shipping-reporting", "signal": "medium"},
+                {"type": "process", "id": "question-answering", "signal": "weak"},
+                {"type": "process", "id": "complaints-management", "signal": "weak"},
+                {"type": "process", "id": "financial-reporting", "signal": "weak"},
+                {"type": "process", "id": "factoring", "signal": "weak"},
+                {"type": "process", "id": "marketing-campaigns", "signal": "weak"},
+                {"type": "process", "id": "seo", "signal": "weak"},
+                {"type": "process", "id": "sem", "signal": "weak"}
+            ]
+        },
+        {
+            "id": "it-infrastructure-team",
+            "name": "IT Infrastructure Team",
+            "description": "Description 1",
+            "team-size": 2,
+            "relations": [
+                {"type": "process", "id": "it-infrastructure", "signal": "strong"}
+            ]
+        }
+    ],
+    "architecture": [
+        {
+            "id": "ecommerce-platform",
+            "name": "e-commerce clothing retail",
+            "description": "An e-commerce platform for selling clothing",
+            "relations": [
+                {"type": "capability", "id": "inventory-management"},
+                {"type": "capability", "id": "shipping-management"},
+                {"type": "team", "id": "operations-team", "signal": "strong"},
+                {"type": "team", "id": "quality-control-team", "signal": "weak"},
+                {"type": "team", "id": "packaging-team", "signal": "medium"},
+                {"type": "team", "id": "shipping-team", "signal": "medium"},
+                {"type": "team", "id": "customer-service-team", "signal": "weak"},
+                {"type": "team", "id": "finance-team", "signal": "weak"},
+                {"type": "team", "id": "marketing-team", "signal": "weak"},
+                {"type": "team", "id": "it-development-team", "signal": "strong"},
+                {"type": "team", "id": "it-infrastructure-team", "signal": "strong"}
+            ]
+        }
+    ]
+}
