@@ -5,14 +5,16 @@
 
 /**
  * Flattens capabilities tree into a list of objects with full metadata.
+ * Adds relations to value stream ids for linking.
  * @param {Array} capabilities - Array of capability nodes (may have nested capabilities)
  * @param {number} depth - Current nesting depth
- * @returns {Array} Flat list of { dataType, type, name, description, products, processes, depth, ... }
+ * @returns {Array} Flat list of { dataType, type, name, description, products, processes, valuestreams, relations, depth, ... }
  */
 function parseCapabilities(capabilities, depth = 0) {
     if (!Array.isArray(capabilities)) return [];
     const items = [];
     for (const cap of capabilities) {
+        const valuestreams = cap.valuestreams ?? [];
         const obj = {
             dataType: 'capability',
             type: cap.type || 'capability',
@@ -20,6 +22,8 @@ function parseCapabilities(capabilities, depth = 0) {
             description: cap.description ?? '',
             products: cap.products ?? [],
             processes: cap.processes ?? [],
+            valuestreams,
+            relations: valuestreams.map((id) => ({ id: String(id) })),
             depth,
         };
         items.push(obj);
@@ -28,6 +32,37 @@ function parseCapabilities(capabilities, depth = 0) {
         }
     }
     return items;
+}
+
+/**
+ * Parses value streams from data (e.g. data.valuestreams or system-overview).
+ * If not present, builds minimal items from ids collected from capabilities.
+ * @param {Object} data - Root object with optional valuestreams array
+ * @param {Array} capabilityItems - Already-parsed capability items (to collect valuestream ids)
+ * @returns {Array} Flat list of { dataType: 'valuestream', id, name, description, drillable: true }
+ */
+function parseValuestreams(data, capabilityItems = []) {
+    const fromData = data?.valuestreams;
+    if (Array.isArray(fromData) && fromData.length > 0) {
+        return fromData.map((vs) => ({
+            dataType: 'valuestream',
+            id: vs.id ?? vs.name,
+            name: vs.name ?? vs.id ?? 'Value stream',
+            description: vs.description ?? '',
+            drillable: true,
+        }));
+    }
+    const ids = new Set();
+    for (const cap of capabilityItems) {
+        for (const id of cap.valuestreams ?? []) ids.add(String(id));
+    }
+    return Array.from(ids).map((id) => ({
+        dataType: 'valuestream',
+        id,
+        name: id.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+        description: '',
+        drillable: true,
+    }));
 }
 
 /**
@@ -43,6 +78,7 @@ function parseProducts(data) {
         id: p.id,
         name: p.name,
         description: p.description ?? '',
+        relations: p.relations ?? [],
     }));
 }
 
@@ -54,11 +90,13 @@ function parseProducts(data) {
 function parseTeams(data) {
     const teams = data?.teams;
     if (!Array.isArray(teams)) return [];
-    return teams.map((t) => ({
+    return teams.map((t, i) => ({
         dataType: 'team',
+        id: t.id ?? `team-${i}`,
         name: t.name,
         description: t.description ?? '',
         processes: t.processes ?? [],
+        relations: t.relations ?? [],
     }));
 }
 
@@ -73,39 +111,45 @@ function parseArchitecture(data, depth = 0) {
     if (!system) return [];
 
     const items = [];
-    const push = (node, type = 'component') => {
+    const push = (node, type = 'component', parentId = null) => {
         items.push({
             dataType: 'architecture',
             type,
+            id: node.id ?? node.name,
             name: node.name,
             description: node.description ?? '',
             depth,
+            parentId,
         });
     };
 
-    push(system, 'software-system');
+    push(system, 'software-system', null);
+    const systemId = system.id ?? system.name;
     const components = system.components;
     if (Array.isArray(components)) {
         for (const comp of components) {
-            items.push(...parseArchitectureNode(comp, depth + 1));
+            items.push(...parseArchitectureNode(comp, depth + 1, systemId));
         }
     }
     return items;
 }
 
-function parseArchitectureNode(node, depth) {
+function parseArchitectureNode(node, depth, parentId) {
     const items = [];
+    const nodeId = node.id ?? node.name;
     items.push({
         dataType: 'architecture',
         type: 'component',
+        id: nodeId,
         name: node.name,
         description: node.description ?? '',
         depth,
+        parentId,
     });
     const children = node.components;
     if (Array.isArray(children)) {
         for (const child of children) {
-            items.push(...parseArchitectureNode(child, depth + 1));
+            items.push(...parseArchitectureNode(child, depth + 1, nodeId));
         }
     }
     return items;
@@ -117,10 +161,12 @@ function parseArchitectureNode(node, depth) {
 function parsePipelines(data) {
     const pipelines = data?.pipelines;
     if (!Array.isArray(pipelines)) return [];
-    return pipelines.map((p) => ({
+    return pipelines.map((p, i) => ({
         dataType: 'pipeline',
+        id: p.id ?? `pipeline-${i}`,
         name: p.name,
         description: p.description ?? '',
+        relations: p.relations ?? [],
         ...p,
     }));
 }
@@ -138,9 +184,12 @@ class BlockParser {
         if (data == null) return [];
         let items = [];
         switch (type) {
-            case 'capabilities':
-                items = parseCapabilities(data.capabilities ?? []);
+            case 'capabilities': {
+                const capabilityItems = parseCapabilities(data.capabilities ?? []);
+                const valuestreamItems = parseValuestreams(data, capabilityItems);
+                items = [...capabilityItems, ...valuestreamItems];
                 break;
+            }
             case 'products':
                 items = parseProducts(data);
                 break;
@@ -160,4 +209,4 @@ class BlockParser {
     }
 }
 
-export { BlockParser, parseCapabilities, parseProducts, parseTeams, parseArchitecture, parsePipelines };
+export { BlockParser, parseCapabilities, parseValuestreams, parseProducts, parseTeams, parseArchitecture, parsePipelines };

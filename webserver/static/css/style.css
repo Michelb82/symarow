@@ -7,22 +7,61 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background: #f5f5f5;
-}
-
-.container {
-    width: 100vw;
-    height: 20vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
-h1 {
-    padding: 20px;
+.page-header {
+    flex-shrink: 0;
     background: white;
     border-bottom: 1px solid #ddd;
-    margin: 0;
-    font-size: 24px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.page-header h1 {
+    font-size: 22px;
     color: #333;
+    margin: 0;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #e2e8f0;
+    color: #334155;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-btn:hover {
+    background: #cbd5e1;
+    color: #1e293b;
+}
+
+.nav-btn:focus {
+    outline: 2px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+.main-content {
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .canvas {
@@ -31,7 +70,7 @@ h1 {
     position: relative;
     overflow: auto;
     background: #fafafa;
-    background-image: 
+    background-image:
         linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0,0,0,.05) 1px, transparent 1px);
     background-size: 20px 20px;
@@ -113,4 +152,18 @@ h1 {
 
 .block-pipeline {
     border-left: 4px solid #9b59b6;
+}
+
+/* Draggable block groups in SVG diagram */
+.block-group {
+    user-select: none;
+}
+
+.block-group:active {
+    cursor: grabbing;
+}
+
+.block-valuestream .block-rect {
+    fill: #fef3c7;
+    stroke: #d97706;
 }

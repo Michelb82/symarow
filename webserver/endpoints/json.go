@@ -18,3 +18,13 @@ func ServeJSON(c *gin.Context) {
 	}
 	c.JSON(200, data)
 }
+
+// ServeModel compiles all data into a single model and returns it as JSON.
+func ServeModel(c *gin.Context) {
+	model, err := fileloader.CompileModel()
+	if err != nil {
+		c.JSON(500, gin.H{"error": err.Error()})
+		return
+	}
+	c.JSON(200, model)
+}

@@ -18,6 +18,7 @@ func Routes() {
 
 	// Routes
 	r.GET("/", endpoints.RenderMainPage)
+	r.GET("/model", endpoints.ServeModel)
 	r.GET("/products", endpoints.ServeJSON)
 	r.GET("/capabilities", endpoints.ServeJSON)
 	r.GET("/teams", endpoints.ServeJSON)
