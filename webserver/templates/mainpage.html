@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capabilities</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-    <div class="container">
-        <h1>Capabilities</h1>
-        <div id="canvas" class="canvas">
-            <svg id="relations-svg" class="relations-layer"></svg>
-            <div id="blocks-container" class="blocks-container"></div>
-        </div>
-    </div>
-    <script>
-        window.pageData = JSON.parse(`{{ .Data }}`);
-        window.pageType = 'capabilities';
-        window.nextPageBase = '/capabilities';
-    </script>
-    <script src="/static/js/block-system.js"></script>
+    <header class="page-header">
+        <h1>Main Page</h1>
+    </header>
+    <main class="main-content">
+        <div id="canvas" class="canvas"></div>
+    </main>
+    <script type="module" src="/static/js/canvas.js"></script>
 </body>
 </html>

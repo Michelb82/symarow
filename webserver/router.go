@@ -1,0 +1,34 @@
+package webserver
+
+import (
+	"log"
+	"sysfas/webserver/endpoints"
+
+	"github.com/gin-gonic/gin"
+)
+
+func Routes() {
+	r := gin.Default()
+
+	// Load HTML templates (relative to where the binary runs)
+	r.LoadHTMLGlob("webserver/templates/*")
+
+	// Serve static files (relative to where the binary runs)
+	r.Static("/static", "webserver/static")
+
+	// Routes
+	r.GET("/", endpoints.RenderMainPage)
+	r.GET("/model", endpoints.ServeModel)
+	r.GET("/products", endpoints.ServeJSON)
+	r.GET("/capabilities", endpoints.ServeJSON)
+	r.GET("/teams", endpoints.ServeJSON)
+	r.GET("/architecture", endpoints.ServeJSON)
+	r.GET("/pipelines", endpoints.ServeJSON)
+	r.GET("/valuestreams", endpoints.ServeJSON)
+
+	// Start server on port 8080 (default)
+	// Server will listen on 0.0.0.0:8080 (localhost:8080 on Windows)
+	if err := r.Run(); err != nil {
+		log.Fatalf("failed to run server: %v", err)
+	}
+}

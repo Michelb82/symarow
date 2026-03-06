@@ -1,24 +1,48 @@
 {
     "products": [
         {
-            "id": "bag",
-            "name": "Bag",
-            "description": "Pretty bags"
+            "id": "ecommerce",
+            "name": "e-commerce clothing retail",
+            "description": "An e-commerce platform for selling clothing",
+            "relations": [
+                {
+                    "type": "valuestream",
+                    "id": "online-acquisition-journey",
+                    "name": "Online Acquisition Journey",
+                    "description": "Our customers can acquire clothing online"
+                },
+                {
+                    "type": "valuestream",
+                    "id": "review-and-reorder",
+                    "name": "Review and Reorder past Purchases",
+                    "description": "Our customers can review and reorder past purchases"
+                },
+                {
+                    "type": "valuestream",
+                    "id": "customer-product-returns",
+                    "name": "Customer Product Returns",
+                    "description": "Customers can return products they have purchased"
+                }
+            ]
         },
         {
-            "id": "leather-coat-female",
-            "name": "Leather Coat Female",
-            "description": "A beautiful coat"
-        },
-        {
-            "id": "fur-coat",
-            "name": "Fur Coat",
-            "description": "A furry coat"
-        },
-        {
-            "id": "leather-coat-male",
-            "name": "Leather Coat Male",
-            "description": "A Stoic coat"
+            "id": "physical-retail",
+            "name": "physical clothing retail",
+            "description": "Our stores for physical retail",
+            "relations": [
+                {
+                    "type": "valuestream",
+                    "id": "physical-acquisition-journey",
+                    "name": "Physical Acquisition Journey",
+                    "description": "Our customers can acquire clothing in physical stores"
+                },
+                {
+                    "type": "valuestream",
+                    "id": "customer-product-returns",
+                    "name": "Customer Product Returns",
+                    "description": "Customers can return products they have purchased"
+                }
+            ]
         }
     ]
 }

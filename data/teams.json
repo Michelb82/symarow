@@ -60,7 +60,7 @@
             ]
         },
         {
-            "name": "IT Development Team leather",
+            "name": "IT Development Team for Online Acquisition Journey",
             "description": "Description 1",
             "processes": [
                 "IT Development",
@@ -83,7 +83,7 @@
             ]
         },
         {
-            "name": "IT Development Team fur",
+            "name": "IT Development Team for Physical Acquisition Journey",
             "description": "Description 1",
             "processes": [
                 "IT Development",
@@ -93,10 +93,6 @@
                 "Fur Inspection",
                 "Fur Testing",
                 "Fur Reporting",
-                "Packaging Planning",
-                "Packaging Reporting",
-                "Shipping capacity planning",
-                "Shipping Reporting",
                 "Question Answering",
                 "Complaints Management",
                 "Financial Reporting",
@@ -115,5 +111,17 @@
                 "IT Support"
             ]
         }
+    ],
+    "process": [
+        "Purchase Order Processing",
+        "Inventory Adjustments",
+        "Inventory Reporting",
+        "Leather Inspection",
+        "Leather Testing",
+        "Leather Reporting",
+        "Packaging Planning",
+        "Packaging Reporting",
+        "Shipping capacity planning",
+        "Shipping Reporting"
     ]
 }
