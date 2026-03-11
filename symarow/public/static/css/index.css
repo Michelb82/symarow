@@ -1,0 +1,145 @@
+/* Index / landing page */
+
+.index-page {
+    background: #fff;
+}
+
+.index-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.index-logo {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-decoration: none;
+}
+
+.index-logo:hover {
+    color: #334155;
+}
+
+.index-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.index-nav-link {
+    padding: 0.5rem 1rem;
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.index-nav-link:hover {
+    color: #1e293b;
+    background: #f1f5f9;
+}
+
+.index-btn-login {
+    background: #2563eb;
+    color: #fff !important;
+    margin-left: 0.5rem;
+}
+
+.index-btn-login:hover {
+    background: #1d4ed8;
+}
+
+.index-main {
+    flex: 1;
+    padding: 2rem 1.5rem;
+}
+
+.index-hero {
+    max-width: 42rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.index-hero h1 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin: 0 0 0.75rem;
+    font-weight: 700;
+}
+
+.index-hero-lead {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+}
+
+.index-cta {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.index-cta:hover {
+    background: #1d4ed8;
+}
+
+.index-section {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.index-section h2 {
+    font-size: 1.25rem;
+    color: #334155;
+    margin: 0 0 0.5rem;
+}
+
+.index-section p {
+    font-size: 0.9375rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.index-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.index-footer p {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .index-header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .index-nav {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .index-hero h1 {
+        font-size: 1.5rem;
+    }
+}

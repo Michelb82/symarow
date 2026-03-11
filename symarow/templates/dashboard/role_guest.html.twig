@@ -1,0 +1,12 @@
+<section class="dashboard-section dashboard-guest">
+    <div class="dashboard-card">
+        <h2>Welcome to Symarow</h2>
+        <p>Sign in with Keycloak to see your role-based dashboard.</p>
+        <p class="guest-cta">
+            <a href="{{ path('auth_login') }}" class="nav-btn nav-btn-primary btn-lg">Login with Keycloak</a>
+        </p>
+        <hr class="guest-divider">
+        <p class="guest-claim">Supported roles (from Keycloak <code>realm_access.roles</code> or JWT <code>role</code>): <strong>CTO</strong>, <strong>Architect</strong>, <strong>Engineering Manager</strong>, <strong>Engineer</strong>, <strong>Business-Employee</strong>.</p>
+        <p class="guest-claim">Alternatively: send JWT in <code>Authorization: Bearer &lt;token&gt;</code> or set the <code>app_token</code> cookie. If the JWT is in <code>localStorage.app_token</code>, a button will appear below to apply it.</p>
+    </div>
+</section>

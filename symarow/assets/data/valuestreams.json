@@ -1,0 +1,24 @@
+{
+    "valuestreams": [
+        {
+            "id": "online-acquisition-journey",
+            "name": "Online Acquisition Journey",
+            "description": "Our customers can acquire clothing online"
+        },
+        {
+            "id": "review-and-reorder",
+            "name": "Review and Reorder past Purchases",
+            "description": "Our customers can review and reorder past purchases"
+        },
+        {
+            "id": "customer-product-returns",
+            "name": "Customer Product Returns",
+            "description": "Customers can return products they have purchased"
+        },
+        {
+            "id": "physical-acquisition-journey",
+            "name": "Physical Acquisition Journey",
+            "description": "Our customers can acquire clothing in physical stores"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+# Keycloak OAuth2 (stevenmaguire/oauth2-keycloak)
+# Set credentials in .env or .env.local
+parameters:
+    keycloak.auth_server_url: '%env(KEYCLOAK_AUTH_SERVER_URL)%'
+    keycloak.realm: '%env(KEYCLOAK_REALM)%'
+    keycloak.client_id: '%env(KEYCLOAK_CLIENT_ID)%'
+    keycloak.client_secret: '%env(KEYCLOAK_CLIENT_SECRET)%'
+    keycloak.redirect_uri: '%env(KEYCLOAK_REDIRECT_URI)%'

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard{% if raw_role %} – {{ raw_role }}{% endif %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body class="dashboard-page">
+    <header class="page-header dashboard-header">
+        <h1><a href="{{ path('home') }}" class="dashboard-home-link">Symarow</a> <span class="dashboard-title-sep">Dashboard</span></h1>
+        <div class="dashboard-header-actions">
+            <div class="dashboard-role">
+                {% if has_role %}
+                    <span class="role-badge role-{{ role }}">{{ raw_role }}</span>
+                {% else %}
+                    <span class="role-badge role-none">No role</span>
+                {% endif %}
+            </div>
+            {% if has_role %}
+                <a href="{{ path('auth_logout') }}" class="nav-btn">Logout</a>
+            {% else %}
+                <a href="{{ path('auth_login') }}" class="nav-btn nav-btn-primary">Login with Keycloak</a>
+            {% endif %}
+        </div>
+    </header>
+    <main class="main-content dashboard-content">
+        {% if has_role %}
+            {% if role == 'cto' %}
+                {% include 'dashboard/role_cto.html.twig' %}
+            {% elseif role == 'architect' %}
+                {% include 'dashboard/role_architect.html.twig' %}
+            {% elseif role == 'engineering_manager' %}
+                {% include 'dashboard/role_engineering_manager.html.twig' %}
+            {% elseif role == 'engineer' %}
+                {% include 'dashboard/role_engineer.html.twig' %}
+            {% elseif role == 'business_employee' %}
+                {% include 'dashboard/role_business_employee.html.twig' %}
+            {% else %}
+                <section class="dashboard-section">
+                    <p>Unknown role: {{ raw_role }}</p>
+                </section>
+            {% endif %}
+        {% else %}
+            {% include 'dashboard/role_guest.html.twig' %}
+        {% endif %}
+    </main>
+    <script type="module" src="/static/js/canvas.js"></script>
+    <script type="module" src="/static/js/dashboard-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+
+    App\Application\Service\JwtRoleResolverInterface:
+        class: App\Infrastructure\Security\JwtRoleResolver
+        arguments:
+            $jwtSecret: '%env(default::JWT_SECRET)%'
+            $jwtPublicKey: '%env(default::JWT_PUBLIC_KEY)%'
+            $cookieName: '%env(JWT_COOKIE_NAME)%'
+
+    App\Infrastructure\Security\KeycloakProviderFactory:
+        arguments:
+            $authServerUrl: '%keycloak.auth_server_url%'
+            $realm: '%keycloak.realm%'
+            $clientId: '%keycloak.client_id%'
+            $clientSecret: '%keycloak.client_secret%'
+            $redirectUri: '%keycloak.redirect_uri%'
+
+    App\Controller\AuthController:
+        arguments:
+            $appTokenCookieName: '%env(JWT_COOKIE_NAME)%'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
